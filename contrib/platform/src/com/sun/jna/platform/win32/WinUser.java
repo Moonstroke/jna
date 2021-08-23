@@ -216,7 +216,8 @@ public interface WinUser extends WinDef {
 
     /** The window is initially disabled. A disabled window cannot receive input
      * from the user. To change this after a window has been created, use the
-     * EnableWindow function. */
+     * {@link com.sun.jna.platform.win32.User32#EnableWindow EnableWindow}
+     * function. */
     int WS_DISABLED    = 0x8000000;
 
     /** The window has a border of a style typically used with dialog boxes. A
