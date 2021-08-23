@@ -1259,6 +1259,27 @@ public interface User32 extends StdCallLibrary, WinUser, WinNT {
     boolean ShowWindow(HWND hWnd, int nCmdShow);
 
     /**
+     * Enables or disables mouse and keyboard input to the specified window or
+     * control. When input is disabled, the window does not receive input such
+     * as mouse clicks and key presses. When input is enabled, the window
+     * receives all input.
+     *
+     * @param hWnd
+     *            A handle to the window to be enabled or disabled.
+     * @param bEnable
+     *            Indicates whether to enable or disable the window. If this
+     *            parameter is TRUE, the window is enabled. If the parameter is
+     *            FALSE, the window is disabled.
+     *
+     * @return If the window was previously disabled, the return value is
+     *         nonzero.
+     *
+     *         If the window was not previously disabled, the return value is
+     *         zero.
+     */
+    boolean EnableWindow(HWND hWnd, boolean bEnable);
+
+    /**
      * Minimizes (but does not destroy) the specified window.
      *
      * @param hWnd
